@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const App = () => {
 
-  const [list, setlist] = useState([]);
+  const [list, setList] = useState([]);
   const [inputText, setInputText] = useState('');
 
   const handleInputChange = (e) => {
@@ -12,10 +12,16 @@ const App = () => {
 
   const handleAddList = () => {
     if (inputText.trim() !== '') {
-      setlist([...list, inputText]);
+      setList([...list, inputText]);
       setInputText('');
     }
   };
+
+  const handleRemove = (index) => {
+    let newListArray = [...list];
+    newListArray.splice(index, 1);
+      setList(newListArray);
+  }
 
   return (
     <div>
@@ -28,11 +34,11 @@ const App = () => {
           onChange={handleInputChange}
         />
         <button onClick={handleAddList}>Add...</button>
-      </div>
+        <button onClick={handleRemove}>Remove</button>
+   ,   </div>
       <ul>
         {list.map((todo, index) => (
           <li key={index}>{todo}</li>
-
         ))}
       </ul>
     </div>
