@@ -1,3 +1,76 @@
 .App {
   text-align: center;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.header{
+  background-color: #053548;
+  border: 1px solid #032330;
+  padding: 1px;
+  
+}
+
+.bar{
+  border-radius: 20px;
+  height: 30px;
+  width: 500px;
+  border: 2px solid #032330;
+  background-color: #749BC2;
+}
+
+
+.add{
+  margin: 20px;
+  background-color: #64CCC5;
+  border: 2px solid #032330;
+  width: 100px;
+  height: 35px;
+  font-weight: bolder;
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.remove{
+  background-color: #176B87;
+  border: 2px solid #032330;
+  width: 100px;
+  height: 35px;
+  font-weight: bolder;
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.complete{
+  margin: 50px 50px 5px 50px;
+  border-radius: 10px;
+  background-color: #47A992;
+  border: 2px solid #032330;
+  cursor: pointer;
+  font-weight: bolder;
+  font-family: monospace;
+  padding: 5px 12px 5px 12px;
+}
+
+.complete:hover{
+  background-color: #2B2A4C;
+  border: 2px solid #2B2A4C;
+}
+
+.listRemove{
+  margin: 50px 50px 5px 50px;
+  border-radius: 10px;
+  background-color: #F4E0B9;
+  border: 2px solid #032330;
+  cursor: pointer;
+  font-weight: bolder;
+  font-family: monospace;
+  padding: 5px 12px 5px 12px;
+}
+
+.listRemove:hover{
+  background-color: #7E1717;
+  border: 2px solid #7E1717;
 }

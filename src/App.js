@@ -31,7 +31,9 @@ const App = () => {
 
   return (
     <div className='App'>
-      <h1>My To-Do List</h1>
+      <div className='header'>
+      <h1>My To-Do-List</h1>
+      </div>
       <div className='content'>
         <input
           type="text"
@@ -42,15 +44,15 @@ const App = () => {
         />
         <button onClick={handleAddList} className='add'>Add...</button>
         <button onClick={handleRemove} className='remove'>Remove</button>
-   ,   </div>
-      <ul>
+      </div>
+      <ul className='list'>
         {list.map((todo, index) => (
           <li key={index}>
             {todo.text}
             {todo.completed ? (
-              <button onClick={() => handleRemove(index)}>Remove</button>
+              <button onClick={() => handleRemove(index)} className='listRemove'>Remove</button>
             ) : (
-              <button onClick={() => handleComplete(index)}>Complete</button>
+              <button onClick={() => handleComplete(index)} className='complete'>Complete</button>
             )}
             </li>
         ))}
