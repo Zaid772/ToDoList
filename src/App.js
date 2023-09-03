@@ -29,6 +29,8 @@ const App = () => {
     setList(newListArray);
   }
 
+  const completedMessage = " ----> Completed :)" 
+
   return (
     <div className='App'>
       <div className='header'>
@@ -37,7 +39,6 @@ const App = () => {
       <div className='content'>
         <input
           type="text"
-          placeholder="Enter a task..."
           value={inputText}
           onChange={handleInputChange}
           className='bar'
@@ -50,7 +51,10 @@ const App = () => {
           <li key={index}>
             {todo.text}
             {todo.completed ? (
-              <button onClick={() => handleRemove(index)} className='listRemove'>Remove</button>
+              <span>
+                {completedMessage}
+                <button onClick={() => handleRemove(index)} className='listRemove' >Remove</button>
+              </span>
             ) : (
               <button onClick={() => handleComplete(index)} className='complete'>Complete</button>
             )}
